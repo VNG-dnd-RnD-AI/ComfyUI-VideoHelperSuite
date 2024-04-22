@@ -194,7 +194,7 @@ class LoadVideoUpload:
                 },
                 }
 
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢"
 
     RETURN_TYPES = ("IMAGE", "INT", "VHS_AUDIO", "VHS_VIDEOINFO",)
     RETURN_NAMES = ("IMAGE", "frame_count", "audio", "video_info",)
@@ -239,7 +239,7 @@ class LoadVideoPath:
             },
         }
 
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢"
 
     RETURN_TYPES = ("IMAGE", "INT", "VHS_AUDIO", "VHS_VIDEOINFO",)
     RETURN_NAMES = ("IMAGE", "frame_count", "audio", "video_info",)

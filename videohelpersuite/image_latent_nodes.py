@@ -42,7 +42,7 @@ class SplitLatents:
                 },
             }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/latent"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/latent"
 
     RETURN_TYPES = ("LATENT", "INT", "LATENT", "INT")
     RETURN_NAMES = ("LATENT_A", "A_count", "LATENT_B", "B_count")
@@ -67,7 +67,7 @@ class SplitImages:
                 },
             }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/image"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/image"
 
     RETURN_TYPES = ("IMAGE", "INT", "IMAGE", "INT")
     RETURN_NAMES = ("IMAGE_A", "A_count", "IMAGE_B", "B_count")
@@ -89,7 +89,7 @@ class SplitMasks:
                 },
             }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/mask"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/mask"
 
     RETURN_TYPES = ("MASK", "INT", "MASK", "INT")
     RETURN_NAMES = ("MASK_A", "A_count", "MASK_B", "B_count")
@@ -114,7 +114,7 @@ class MergeLatents:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/latent"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/latent"
 
     RETURN_TYPES = ("LATENT", "INT",)
     RETURN_NAMES = ("LATENT", "count",)
@@ -164,7 +164,7 @@ class MergeImages:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/image"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/image"
 
     RETURN_TYPES = ("IMAGE", "INT",)
     RETURN_NAMES = ("IMAGE", "count",)
@@ -215,7 +215,7 @@ class MergeMasks:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/mask"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/mask"
 
     RETURN_TYPES = ("MASK", "INT",)
     RETURN_NAMES = ("MASK", "count",)
@@ -264,7 +264,7 @@ class SelectEveryNthLatent:
                 },
             }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/latent"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/latent"
 
     RETURN_TYPES = ("LATENT", "INT",)
     RETURN_NAMES = ("LATENT", "count",)
@@ -285,7 +285,7 @@ class SelectEveryNthImage:
                 },
             }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/image"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/image"
 
     RETURN_TYPES = ("IMAGE", "INT",)
     RETURN_NAMES = ("IMAGE", "count",)
@@ -306,7 +306,7 @@ class SelectEveryNthMask:
                 },
             }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/mask"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/mask"
 
     RETURN_TYPES = ("MASK", "INT",)
     RETURN_NAMES = ("MASK", "count",)
@@ -326,7 +326,7 @@ class GetLatentCount:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/latent"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/latent"
 
     RETURN_TYPES = ("INT",)
     RETURN_NAMES = ("count",)
@@ -345,7 +345,7 @@ class GetImageCount:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/image"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/image"
 
     RETURN_TYPES = ("INT",)
     RETURN_NAMES = ("count",)
@@ -364,7 +364,7 @@ class GetMaskCount:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/mask"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/mask"
 
     RETURN_TYPES = ("INT",)
     RETURN_NAMES = ("count",)
@@ -384,7 +384,7 @@ class DuplicateLatents:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/latent"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/latent"
 
     RETURN_TYPES = ("LATENT", "INT",)
     RETURN_NAMES = ("LATENT", "count",)
@@ -409,7 +409,7 @@ class DuplicateImages:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/image"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/image"
 
     RETURN_TYPES = ("IMAGE", "INT",)
     RETURN_NAMES = ("IMAGE", "count",)
@@ -433,7 +433,7 @@ class DuplicateMasks:
             }
         }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/mask"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/mask"
 
     RETURN_TYPES = ("MASK", "INT",)
     RETURN_NAMES = ("MASK", "count",)

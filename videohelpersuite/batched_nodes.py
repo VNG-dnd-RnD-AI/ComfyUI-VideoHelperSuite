@@ -13,7 +13,7 @@ class VAEDecodeBatched:
                 }
             }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/batched nodes"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/batched nodes"
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "decode"
@@ -35,7 +35,7 @@ class VAEEncodeBatched:
                 }
             }
     
-    CATEGORY = "Video Helper Suite 🎥🅥🅗🅢/batched nodes"
+    CATEGORY = "VNG Video Helper Suite 🎥🅥🅗🅢/batched nodes"
 
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "encode"
