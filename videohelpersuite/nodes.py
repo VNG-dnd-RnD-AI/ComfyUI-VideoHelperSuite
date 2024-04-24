@@ -10,7 +10,7 @@ import torch
 from PIL import Image, ExifTags
 from PIL.PngImagePlugin import PngInfo
 from pathlib import Path
-
+import requests
 import folder_paths
 from .logger import logger
 from .image_latent_nodes import *
@@ -697,7 +697,12 @@ class PruneOutputs:
 class ProcessOutputs:
     @classmethod
     def INPUT_TYPES(s):
-        return {"required": {"filenames": ("VHS_FILENAMES",), "options": (["S3"],)}}
+        return {
+            "required": {
+                "filenames": ("VHS_FILENAMES",),
+                "options": (["S3", "S3_AND_VNG_WEBHOOK"],),
+            }
+        }
 
     RETURN_TYPES = ()
     OUTPUT_NODE = True
@@ -709,12 +714,17 @@ class ProcessOutputs:
             return ()
         assert len(filenames[1]) <= 3 and len(filenames[1]) >= 2
         delete_list = []
+        source_file = filenames[1][1]
+        jobId = source_file.split("_")[1]
+        destination_file = "dev/" + os.path.split(source_file)[1]
         if options in ["S3"]:
             # print(filenames,filenames[1]) # (True, ['/workspace/output/AnimateDiff_00048.png', '/workspace/output/AnimateDiff_00048.mp4']) ['/workspace/output/AnimateDiff_00048.png', '/workspace/output/AnimateDiff_00048.mp4']
-            source_file = filenames[1][1]
+
             # The destination bucket and filename on the MinIO server
-            destination_file = "dev/" + os.path.split(source_file)[1]
             self.s3_upload(source_file=source_file, destination_file=destination_file)
+        if options in ["S3_AND_VNG_WEBHOOK"]:
+            self.s3_upload(source_file=source_file, destination_file=destination_file)
+            self.VNGhook(destination_file, jobId)
         return ()
 
     def s3_upload(self, source_file, destination_file):
@@ -751,6 +761,25 @@ class ProcessOutputs:
             "to bucket",
             bucket_name,
         )
+
+    def VNGhook(self, video_path_dest, jobid):
+        headers = {
+            "service-key": os.environ.get("VNG_VIDEO_HOOK_KEY"),
+            # Already added when you pass json=
+            # 'Content-Type': 'application/json',
+        }
+        data = {"video_path": video_path_dest, "jobId": jobid}
+        json_data = {
+            "message": video_path_dest,
+            "data": json.dumps(data),
+        }
+
+        response = requests.post(
+            "https://dev-artian.vng.vn/api/video/webhook",
+            headers=headers,
+            json=json_data,
+        )
+        print(response)
 
 
 class BatchManager:
